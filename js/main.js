@@ -34,8 +34,9 @@ $(function () {
         $('.turn-icon').css('visibility', 'visible')
       }, 9000)
 
-      let audio1 = new Audio('../audio1.mp3')
-      let audio2 = new Audio('../audio2.mp3')
+      let origin = window.location.origin;
+      let audio1 = new Audio(origin+'/audio1.mp3')
+      let audio2 = new Audio(origin+'/audio2.mp3')
       let currentAudio = 1;
 
       audio1.play()
