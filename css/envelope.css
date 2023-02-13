@@ -58,9 +58,9 @@
 }
 .letter .body .close {
   position: absolute;
-  right: -5%;
-  top: -25%;
-  font-size: 30px;
+  right: -7%;
+  top: -21%;
+  font-size: 20px;
   font-family: "Manjari", sans-serif;
   cursor: pointer;
   -webkit-user-select: none;
@@ -69,7 +69,7 @@
   user-select: none;
 }
 .letter .body .message {
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-align: left;
 }
 
