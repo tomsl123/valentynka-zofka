@@ -261,3 +261,229 @@ textarea {
   }
 }
 
+body {
+  height: 100vh;
+  background-color: #fffef8;
+}
+
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.valentine-wrapper {
+  background-color: #ffe5fe;
+  width: 70vw;
+  height: 85vh;
+  text-align: center;
+}
+
+.heart {
+  display:inline-block;
+  aspect-ratio: 1;
+  border-image: radial-gradient(#ff69b4 69%,#0000 70%) 84.5% fill/100%;
+  clip-path: polygon(-41% 0,50% 91%, 141% 0);
+}
+
+.pulseAnimated {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.flip-container {
+  perspective: 1000px;
+}
+
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.flipped .flipper {
+  transform: rotateY(180deg);
+}
+
+.text-reveal {
+  overflow: hidden;
+  width: 0;
+  white-space: nowrap;
+  position: relative;
+}
+
+.s2 {
+  transition: width 2s linear;
+}
+
+.s3 {
+  transition: width 3s linear;
+}
+
+.text-reveal.revealed {
+  width: 100%;
+}
+
+.particles {
+  position: absolute;
+  top: -10rem;
+  left: -10rem;
+  z-index: 10;
+}
+
+.particle {
+  visibility: hidden;
+  width: 1.4rem;
+  border-image: radial-gradient(#ff0000 69%,#0000 70%) 84.5% fill/100%;
+  transition: transform 1s;
+}
+
+.particle.rise {
+  visibility: visible;
+  transform: translate(2rem, -2rem);
+  opacity: 0.2;
+}
+
+.particle.fall {
+  visibility: visible;
+  transform: translate(2rem, 2rem);
+  opacity: 0.2;
+}
+
+.particle.space-reduction {
+  left: -0.2rem;
+}
+
+.particle-row2 {
+  margin-top: -1.4rem;
+  margin-left: 1.4rem;
+}
+
+.particle-row3 {
+  margin-top: -1.4rem;
+}
+
+.particle-row4 {
+  margin-top: -1.4rem;
+}
+
+@font-face {
+  font-family: Together;
+  src: url(../Together.otf);
+}
+
+.main-text {
+  font-family: Together,cursive;
+  font-size: 10rem;
+  margin: 0;
+  text-align: left;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+
+.name-text {
+  font-family: Together,serif;
+  font-size: 8rem;
+  margin: 0;
+  text-align: left;
+  box-sizing: border-box;
+  padding-left: 5px;
+}
+
+.heart.big-red {
+  width: 15% !important;
+  border-image: radial-gradient(#ff0000 69%,#0000 70%) 84.5% fill/100%;
+  position: absolute;
+  top: 57% !important;
+  left: 30% !important;
+  background-color: unset;
+  height: unset;
+  line-height: unset;
+}
+
+.initial {
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transition: all 2s, background-color 1s;
+  z-index: 10;
+  line-height: 100vh;
+  font-size: 15vh;
+  font-family: Together, cursive;
+  color: white;
+}
+
+.heart.little-1 {
+  width: 5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.fade-in-out-animated {
+  animation: fade-in-out 6s ease-in-out infinite;
+}
+
+@keyframes fade-in-out {
+  0%,100% {
+    opacity: 0;
+    scale: 90%;
+  }
+  50% {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+.turn-icon {
+  width: 6%;
+  position: absolute;
+  top: 86%;
+  left: 77%;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+#sound {
+  width: 4%;
+  position: absolute;
+  bottom: 2%;
+  left: 1%;
+  cursor: pointer;
+  visibility: hidden;
+}
